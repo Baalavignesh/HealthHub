@@ -15,7 +15,7 @@ const withAuth = (WrappedComponent: React.ComponentType<any>) => {
 
       setTimeout(() => {
         if (!accessToken) {
-          navigate("/");
+          navigate("/login");
           return;
         }
         else {
@@ -23,7 +23,7 @@ const withAuth = (WrappedComponent: React.ComponentType<any>) => {
         }
         setLoading(false);
 
-      }, 3000)
+      }, 500)
 
     };
 

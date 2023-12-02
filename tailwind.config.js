@@ -10,6 +10,7 @@ export default {
       'secondary': '#ff49db',
       'custom-white': '#f2f2f2',
       'custom-black': '#13ce66',
+      'red':'rgb(248 113 113);'
     },
     extend: {},
 
