@@ -1,0 +1,132 @@
+{
+    "v": 1,
+    "name": "Doctor-User-Appointment API",
+    "folders": [],
+    "requests": [
+        {
+            "v": "1",
+            "name": "Add Doctor",
+            "endpoint": "https://e4qkzaaxtd.execute-api.us-east-1.amazonaws.com/doctors",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "authType": "none",
+                "authActive": true
+            },
+            "body": {
+                "contentType": "application/json",
+                "body": "{\"name\": \"Dr. Namitha\", \"specialization\": \"ENT\", \"contactNumber\": \"123-456-7890\",\"location\":\"Chennai\",\"hospitalName\":\"Ganga\"}\n\n\n\n\n\n"
+            },
+            "preRequestScript": "",
+            "testScript": ""
+        },
+        {
+            "v": "1",
+            "name": "Add User",
+            "endpoint": "d",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "authType": "none",
+                "authActive": true
+            },
+            "body": {
+                "contentType": "application/json",
+                "body": "{\"name\": \"Mithilesh\", \"email\": \"ananth@example.com\",\"password\":\"password\",\"contact_number\": \"456-789-0123\",\"location\":\"Chennai\",\"age\":20,\"gender\":\"M\"}\n\n\n\n\n"
+            },
+            "preRequestScript": "",
+            "testScript": ""
+        },
+        {
+            "v": "1",
+            "name": "Schedule Appointment",
+            "endpoint": "https://e4qkzaaxtd.execute-api.us-east-1.amazonaws.com/appointments/book",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "authType": "none",
+                "authActive": true
+            },
+            "body": {
+                "contentType": "application/json",
+                "body": "{\"user_id\": 1, \"doctor_id\": 1, \"appointment_date\": \"2023-01-15\", \"appointment_time\": \"10:00 AM\"}\n"
+            },
+            "preRequestScript": "",
+            "testScript": ""
+        },
+        {
+            "v": "1",
+            "name": "Get All Doctors",
+            "endpoint": "https://e4qkzaaxtd.execute-api.us-east-1.amazonaws.com/doctors",
+            "method": "GET",
+            "headers": [],
+            "params": [
+                {
+                    "key": "location",
+                    "value": "chennai",
+                    "active": true
+                }
+            ],
+            "auth": {
+                "authType": "none",
+                "authActive": true
+            },
+            "body": {
+                "contentType": "application/json",
+                "body": "{\"name\": \"Dr. Smith\", \"specialization\": \"ENT\", \"contactNumber\": \"123-456-7890\",\"location\":\"Chennai\",\"hospitalName\":\"Godzi\"}\n\n\n\n"
+            },
+            "preRequestScript": "",
+            "testScript": ""
+        },
+        {
+            "v": "1",
+            "name": "Update Appointment",
+            "endpoint": "https://e4qkzaaxtd.execute-api.us-east-1.amazonaws.com/appointments/result",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "authType": "none",
+                "authActive": true
+            },
+            "body": {
+                "contentType": "application/json",
+                "body": "{\"appointment_id\":1,\"symptoms\": \"COVID\", \"result\": \"COVID +ve\"}\n\n\n\n"
+            },
+            "preRequestScript": "",
+            "testScript": ""
+        },
+        {
+            "v": "1",
+            "name": "Get User",
+            "endpoint": "https://e4qkzaaxtd.execute-api.us-east-1.amazonaws.com/users",
+            "method": "GET",
+            "headers": [],
+            "params": [
+                {
+                    "key": "queryKey",
+                    "value": "name",
+                    "active": false
+                },
+                {
+                    "key": "queryValue",
+                    "value": "ananth",
+                    "active": false
+                }
+            ],
+            "auth": {
+                "authType": "none",
+                "authActive": true
+            },
+            "body": {
+                "contentType": "application/json",
+                "body": "{\"name\": \"Ananth\", \"email\": \"ananth@example.com\", \"contact_number\": \"456-789-0123\",\"location\":\"Coimbatore\",\"age\":20,\"gender\":\"M\"}\n\n"
+            },
+            "preRequestScript": "",
+            "testScript": ""
+        }
+    ]
+}

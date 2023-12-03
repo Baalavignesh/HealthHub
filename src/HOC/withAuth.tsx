@@ -1,35 +1,50 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { useNavigate } from "react-router-dom";
+import { setTokens } from "../features/auth/authSlice";
 
 const withAuth = (WrappedComponent: React.ComponentType<any>) => {
   return (props: any) => {
-    const { accessToken, refreshToken, idToken } = useSelector(
+    const { userInformation } = useSelector(
       (state: RootState) => state.authStore
     );
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const checkAuth = async () => {
+      console.log('checking auth')
+      console.log(userInformation)
+      if (Object.keys(userInformation).length == 0) {
+        console.log('no user data')
+        let info = localStorage.getItem("user");
+        let usertype_local = localStorage.getItem("usertype");
+        console.log(info, usertype_local);
 
-      setTimeout(() => {
-        if (!accessToken) {
-          navigate("/login");
-          return;
+        if (info) {
+          dispatch(
+            setTokens({
+              userInformation: info,
+              userType: usertype_local
+            })
+          );
+        } else {
+          navigate("/dashboard");
         }
-        else {
-          navigate("/dashboard")
-        }
-        setLoading(false);
 
-      }, 500)
-
+        navigate("/login");
+        return;
+      } else {
+        console.log('user found')
+        navigate("/dashboard");
+      }
+      setLoading(false);
     };
 
     useEffect(() => {
       checkAuth();
-    }, [accessToken, refreshToken, idToken]);
+    }, [userInformation]);
 
     if (loading) {
       return <div>Loading...</div>;
@@ -40,3 +55,4 @@ const withAuth = (WrappedComponent: React.ComponentType<any>) => {
 };
 
 export default withAuth;
+

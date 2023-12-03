@@ -8,20 +8,19 @@ const NavBar = () => {
   const navigate = useNavigate();
 
 
-  const handleLogout = () => {
-    console.log('Logout clicked');
     const handleLogout = () => {
+      console.log('Logout clicked');
+
+      localStorage.clear();
       dispatch(
         setTokens({
-          accessToken: "",
-          refreshToken: "",
-          idToken: "",
+          userInformation: {},
         })
       );
       navigate("/");
     };
     
-  };
+  
   return (
     <nav className="bg-blue-500 p-4 flex w-full justify-between items-center border-b-2 border-custom-white">
       <div className="text-white text-xl font-semibold">HealthHub</div>

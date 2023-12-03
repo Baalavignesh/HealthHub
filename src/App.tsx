@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ErrorPage, Dashboard, Login } from "./pages";
 import withAuth from "./HOC/withAuth";
-import SignUpForm from "./pages/authentication/RegisterUser";
+import SignUpForm from "./pages/authentication/RegisterPage";
 import AppointmentForm from "./pages/end-user/BookAppointment";
 
 function App() {
