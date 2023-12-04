@@ -1,0 +1,54 @@
+org: notagodzilla
+app: datapalooza
+service: datapalooza
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+          cors: true
+          private: false
+      - http:
+          method: ANY
+          path: /doctors
+          cors: true
+          private: false
+      - http:
+          method: ANY
+          path: /users
+          cors: true
+          private: false
+      - http:
+          method: ANY
+          path: /appointments
+          cors: true
+          private: false
+      - http:
+          method: POST
+          path: /appointments/book
+          cors: true
+          private: false
+      - http:
+          method: POST
+          path: /appointments/result
+          cors: true
+          private: false
+      - http:
+          method: POST
+          path: /appointments/assign
+          cors: true
+          private: false
+      - http:
+          method: POST
+          path: /login
+          cors: true
+          private: false
+
