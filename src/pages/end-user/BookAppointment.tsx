@@ -9,8 +9,9 @@ import { RootState } from "../../store/store";
 // Define the interface for appointment information
 interface AppointmentInfo {
   user_id: number;
-  appointment_date: string;
-  appointment_time: string;
+  appointment_date: Date;
+  appointment_time: EpochTimeStamp;
+  location:string;
   symptoms: string;
 }
 
@@ -41,7 +42,8 @@ const AppointmentForm: React.FC = () => {
   let setUser = (val: any) => {
     setUserId(val.user_id);
     setValue("user_id", val.user_id);
-    console.log(val.user_id);
+    setValue("location", val.location);
+    console.log(val.location);
   };
 
 

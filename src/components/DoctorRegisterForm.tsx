@@ -148,7 +148,7 @@ const DoctorRegisterForm = () => {
             <option value="gastroenterology">Gastroenterology</option>
             <option value="neurology">Neurology</option>
             <option value="pulmonology">Pulmonology</option>
-            <option value="obgyn">Obstetrics and Gynecology</option>
+            <option value="general practitioner">General Practitioner</option>
             <option value="psychiatry">Psychiatry</option>
           </select>
         </div>

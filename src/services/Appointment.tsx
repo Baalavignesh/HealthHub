@@ -5,8 +5,8 @@ interface AppointmentResponse {
   appointment_id: number;
   user_id: number;
   doctor_id: number;
-  appointment_date: string;
-  appointment_time: string;
+  appointment_date: Date;
+  appointment_time: EpochTimeStamp;
   location: string;
   symptoms: string;
   result: string;
@@ -14,8 +14,9 @@ interface AppointmentResponse {
 
 interface AppointmentInfo {
     user_id:number;
-    appointment_date: string;
-    appointment_time: string;
+    appointment_date: Date;
+    appointment_time: EpochTimeStamp;
+    location:string;
     symptoms: string;
   }
 

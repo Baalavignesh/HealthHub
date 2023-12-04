@@ -54,7 +54,7 @@ const Dashboard = () => {
     <div className="flex flex-col justify-center items-center">
       <NavBar />
       <div className="container">
-        <h1 className="mt-8">Dashboard Screen</h1>
+        <h1 className="mt-8">Dashboard</h1>
 
         <div className="w-full flex justify-between items-center mt-4">
           <div className="flex w-2/3 justify-center items-center">
