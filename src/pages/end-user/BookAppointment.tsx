@@ -17,7 +17,7 @@ interface AppointmentInfo {
 
 // Define the functional component for the appointment form
 const AppointmentForm: React.FC = () => {
-  const { userInformation, userType } = useSelector(
+  const { userInformation } = useSelector(
     (state: RootState) => state.authStore
   );
 

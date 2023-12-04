@@ -21,8 +21,8 @@ const DoctorRegisterForm = () => {
   const {
     register:registerDoctor,
     handleSubmit:handleSubmitDoctor,
-    watch:watchDoctor,
-    formState: { errors:errorDoctor },
+    // watch:watchDoctor,
+    // formState: { errors:errorDoctor },
   } = useForm<DoctorInfo>();
 
   const onDoctorSubmit: SubmitHandler<DoctorInfo> =  async (data) => {

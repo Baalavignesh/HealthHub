@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { setTokens } from "../../features/auth/authSlice";
-import { useDispatch, useSelector } from "react-redux";
+// import { setTokens } from "../../features/auth/authSlice";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/Header";
 import SearchIcon from "@mui/icons-material/Search";

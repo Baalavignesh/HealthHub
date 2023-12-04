@@ -1,0 +1,30 @@
+service: healthhub-react
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  app:
+    handler: handler.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+
+plugins:
+  - serverless-apigw-binary
+
+custom:
+  apigwBinary:
+    types:
+      - '*/*'
+
+package:
+  individually: true
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+    - .vscode/**

@@ -15,13 +15,13 @@ const Login = () => {
     type: string;
   }
 
-  let [errorMessage, setErrorMessage] = useState<string>();
+  let [errorMessage] = useState<string>();
 
   const {
     register: loginRegister,
     handleSubmit: handleLogin,
-    watch: watchLogin,
-    formState: { errors: errorsLogin },
+    // watch: watchLogin,
+    // formState: { errors: errorsLogin },
   } = useForm<LoginCredentials>();
 
   const onSubmit: SubmitHandler<LoginCredentials> = async (data) => {

@@ -20,8 +20,8 @@ let navigate = useNavigate();
   const {
     register: registerUser,
     handleSubmit: handleSubmitUser,
-    watch: watchUser,
-    formState: { errors: errorUser },
+    // watch: watchUser,
+    // formState: { errors: errorUser },
   } = useForm<UserInfo>();
 
   const onUserSubmit: SubmitHandler<UserInfo> = async (data) => {

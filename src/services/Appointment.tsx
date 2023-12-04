@@ -1,16 +1,16 @@
 import axios from "axios";
 import ENDPOINT from "../constants/api_endpoint";
 
-interface AppointmentResponse {
-  appointment_id: number;
-  user_id: number;
-  doctor_id: number;
-  appointment_date: Date;
-  appointment_time: EpochTimeStamp;
-  location: string;
-  symptoms: string;
-  result: string;
-}
+// interface AppointmentResponse {
+//   appointment_id: number;
+//   user_id: number;
+//   doctor_id: number;
+//   appointment_date: Date;
+//   appointment_time: EpochTimeStamp;
+//   location: string;
+//   symptoms: string;
+//   result: string;
+// }
 
 interface AppointmentInfo {
     user_id:number;
