@@ -3,6 +3,8 @@
 
 Elevate your healthcare –connecting you with trusted professionals, and fostering community well-being through real-time alerts. Your gateway to personalised and accessible health services.
 
+![Alt text](https://raw.githubusercontent.com/cenentury0941/Pictures/main/title.png)
+
 # Inspiration
 
 In the dynamic landscape of healthcare, the ongoing challenges necessitate innovative solutions that go beyond traditional boundaries. Responding to the pressing needs of our time, we introduce HealthHub, a comprehensive healthcare appointment app designed to enhance accessibility to medical services, foster proactive health management, and facilitate community health awareness.
@@ -14,6 +16,8 @@ HealthHub empowers users to seamlessly connect with healthcare professionals by 
 A standout feature of HealthHub is the proactive community health alert system. In areas with a concentration of appointments related to a specific disease, users receive notifications, creating a collective awareness of potential health risks. This real-time alert system aims to curb the spread of illnesses and promote community well-being.
 
 # Tech Stack
+
+![Alt text](https://raw.githubusercontent.com/cenentury0941/Pictures/main/1.%20Architecture%20Diagram.png)
 
 HealthHub leverages a robust tech stack to deliver a secure and efficient user experience. The backend is developed using Node.js, ensuring scalable and responsive server-side operations. React is employed for the frontend, providing a dynamic and user-friendly interface.
 
